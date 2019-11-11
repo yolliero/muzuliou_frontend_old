@@ -1,0 +1,50 @@
+<div class="conteneur">
+    <div class= "vertical_bar_black"></div>
+    <div class= "horizontal_bar_black"></div>
+
+    <div class="puffin">
+
+        <mat-grid-list cols="2" rowHeight='100px'  [gutterSize]="1">
+            <mat-grid-tile
+               
+                [colspan]="1"
+                [rowspan]="3"
+            >
+              <img src="../../assets/puffin.svg" width=100% >
+            </mat-grid-tile>
+            <mat-grid-tile
+              [colspan]="1"
+              [rowspan]="1"  
+            >
+              <mat-form-field>
+                  <input matInput placeholder="name" >
+              </mat-form-field>
+            </mat-grid-tile>
+              <mat-grid-tile
+              [colspan]="1"
+              [rowspan]="1"  
+            >
+              <mat-form-field>
+                  <input matInput placeholder="password" >
+                </mat-form-field>
+            </mat-grid-tile>
+           
+            <mat-grid-tile
+              [colspan]="1"
+              [rowspan]="1"
+            >
+              <button mat-flat-button color="warn" 
+                      (click)="login()">
+                        login
+              </button>
+            </mat-grid-tile>
+          </mat-grid-list>
+          
+
+      
+        <br>
+       
+      
+    </div>
+   
+</div>
