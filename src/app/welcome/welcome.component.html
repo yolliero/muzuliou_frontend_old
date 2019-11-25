@@ -1,9 +1,11 @@
+
+
 <div class="conteneur">
     <div class= "vertical_bar_black"></div>
     <div class= "horizontal_bar_black"></div>
 
     <div class="puffin">
-
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
         <mat-grid-list cols="2" rowHeight='100px'  [gutterSize]="1">
             <mat-grid-tile
                
@@ -17,7 +19,7 @@
               [rowspan]="1"  
             >
               <mat-form-field>
-                  <input matInput placeholder="name" >
+                  <input matInput placeholder="name"  formControlName="username">
               </mat-form-field>
             </mat-grid-tile>
               <mat-grid-tile
@@ -25,7 +27,7 @@
               [rowspan]="1"  
             >
               <mat-form-field>
-                  <input matInput placeholder="password" >
+                  <input matInput type="password" placeholder="password"  formControlName="password" >
                 </mat-form-field>
             </mat-grid-tile>
            
@@ -34,7 +36,7 @@
               [rowspan]="1"
             >
               <button mat-flat-button color="warn" 
-                      (click)="login()">
+                      type="submit"  >
                         login
               </button>
             </mat-grid-tile>
@@ -44,7 +46,7 @@
       
         <br>
        
-      
+      </form>
     </div>
    
 </div>

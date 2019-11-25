@@ -1,7 +1,10 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { AngularmaterialModule } from './angularmaterial/angularmaterial.module';
+import {AngularmaterialModule} from './angularmaterial/angularmaterial.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -11,9 +14,11 @@ import { AngularmaterialModule } from './angularmaterial/angularmaterial.module'
     CommonModule,
     AngularmaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    HttpClientModule,
+    ReactiveFormsModule
+
   ],
 
-  exports : [ AngularmaterialModule, FormsModule],
+  exports : [ AngularmaterialModule, ReactiveFormsModule],
 })
 export class CoreModule { }
