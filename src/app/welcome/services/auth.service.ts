@@ -22,7 +22,7 @@ export class AuthService {
     return this.httpService.post(data).subscribe(
           res => {
             console.log('welcomeservie', res);
-            this.route.navigate(['/dashboard']);
+            this.route.navigate(['/home/dashboard']);
             this.token = res.token;
             this.userLog = res;
             this.loginState= true;

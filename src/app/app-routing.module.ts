@@ -2,23 +2,22 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGaurdService } from './core/services/auth-gaurd.service';
-import { DashboardComponent } from './home/dashboard/dashboard.component';
-
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'welcome',
+    path: '',
     component: WelcomeComponent,
   },
   { path: '',
     redirectTo: '/welcome',
     pathMatch: 'full'
   },
-  { path: 'dashboard',
-  component: DashboardComponent,
-  pathMatch: 'full',
-/*  canActivate: [AuthGaurdService ] */
-}
+  {
+    path: 'home',
+   loadChildren: () => import(`./home/home.module`).then(m => m.homeModule)
+  }
+
 
 ];
 

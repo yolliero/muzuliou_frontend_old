@@ -7,22 +7,21 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CoreModule} from './core/core.module';
 import { HomeRoutingModule } from './home/home-routing.module';
-import { HomeModule } from './home/HomeModule';
-import { AddEcmeComponent } from './add-ecme/add-ecme.component';
+import { homeModule } from './home/home.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    AddEcmeComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
-    HomeModule
+    homeModule
    ],
   exports: [CoreModule],
   providers: [],

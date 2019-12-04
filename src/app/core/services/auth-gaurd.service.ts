@@ -27,7 +27,7 @@ return true;
 // check if user has permissions to access the view.
 if (!this.authService.isLogged()) {
   if (this.router.url === '/') {
-    this.router.navigate(['/welcome']);
+    this.router.navigate(['/home/dashboard']);
     }
 
 }

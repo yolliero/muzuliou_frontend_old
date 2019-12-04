@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <span>Muzuliou</span>
+  
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+  
+    <span>Welcome {{unsernameTemp}}</span>
+   
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened >
+
+         <div> <a routerLink="createEcme">Ajouer un ecme</a> </div>
+         
+         <div> <a>Rechercher <br>un ecme</a></div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+          
+          <router-outlet></router-outlet>
+        <muz-add-ecme></muz-add-ecme>
+       
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
+  
